@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legacy Safaris Ltd | Authentic African Safari Adventures</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Additional homepage styles (compatible with existing style.css) */
+    .hero {
+      position: relative;
+      background: linear-gradient(105deg, rgba(0,0,0,0.55), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&h=700&fit=crop') center/cover no-repeat;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+    }
+    .featured-tours {
+      background: #FFF9F2;
+      border-radius: 48px;
+      padding: 2rem 0;
+    }
+    .tour-card-featured {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.3s;
+      box-shadow: 0 12px 20px -12px rgba(0,0,0,0.08);
+    }
+    .tour-card-featured:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .testimonial-card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: 0 12px 20px -10px rgba(0,0,0,0.05);
+      transition: 0.2s;
+    }
+    .testimonial-card i {
+      font-size: 2rem;
+      color: var(--savanna-gold);
+      margin-bottom: 1rem;
+    }
+    .testimonial-card h4 {
+      margin-top: 1rem;
+      color: var(--acacia-green);
+    }
+    .cta-banner {
+      background: linear-gradient(135deg, var(--acacia-green), #1E4A2E);
+      border-radius: 48px;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+      margin: 2rem 0;
+    }
+    .partners-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+      margin: 2rem 0;
+    }
+    .partners-logos img {
+      height: 50px;
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+    .partners-logos img:hover {
+      opacity: 1;
+    }
+    .blog-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px -8px rgba(0,0,0,0.05);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .blog-card-content {
+      padding: 1.2rem;
+    }
+    .newsletter {
+      background: var(--dusty-cream);
+      border-radius: 48px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .newsletter-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .newsletter-form input {
+      padding: 12px 20px;
+      border-radius: 40px;
+      border: none;
+      width: 280px;
+      max-width: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .cta-banner {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Unleash the untamed <br> beauty of Africa</h1>
+          <p>Experience legendary wildlife, raw landscapes, and authentic safari adventures with Legacy Safaris — where every footprint tells a story.</p>
+          <a href="tours.html" class="btn-primary">Explore Our Tours <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Legacy Safaris (features) -->
+    <section class="container section-padding">
+      <h2 class="section-title">Why Legacy Safaris</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-tree feature-icon"></i>
+          <h3>Eco‑Conscious</h3>
+          <p>We support conservation and local communities in every safari.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-user-tie feature-icon"></i>
+          <h3>Expert Guides</h3>
+          <p>Certified naturalists with decades of bush experience.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-camera-retro feature-icon"></i>
+          <h3>Photographic Focus</h3>
+          <p>Vehicles designed for prime shooting angles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Tours Section -->
+    <section class="featured-tours section-padding">
+      <div class="container">
+        <h2 class="section-title">Signature Safaris</h2>
+        <p class="section-sub">Handpicked journeys that immerse you in wild majesty</p>
+        <div class="tours-grid" id="featured-tours-grid">
+          <!-- Dynamically populated with top 3 tours from main.js or static -->
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="tours.html" class="btn-primary">View All Packages <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container section-padding">
+      <h2 class="section-title">Wilderness Stories</h2>
+      <p class="section-sub">What our guests say about their Legacy Safari</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"The migration crossing was surreal. Our guide Joseph knew exactly where to position us. This was a once‑in‑a‑lifetime trip!"</p>
+          <h4>— Sarah & Mark, UK</h4>
+        </div>
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"Legacy Safaris went above and beyond to arrange a gorilla trek for my 70th birthday. Truly unforgettable."</p>
+          <h4>— Dr. James O., USA</h4>
+        </div>
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"The attention to detail, the eco‑lodges, the food – everything was perfect. We'll be back for the wildebeest calving."</p>
+          <h4>— Priya & Anil, India</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conservation Commitment Banner -->
+    <div class="container">
+      <div class="cta-banner">
+        <i class="fas fa-leaf" style="font-size: 3rem; margin-bottom: 1rem; display: inline-block;"></i>
+        <h2>We give back 5% of every safari to anti‑poaching & reforestation</h2>
+        <p>Travel with purpose – every booking plants 10 trees and supports local rangers.</p>
+        <a href="about.html" class="btn-primary" style="background: white; color: var(--acacia-green); margin-top: 1rem;">Learn About Our Impact</a>
+      </div>
+    </div>
+
+    <!-- Awards & Partners -->
+    <section class="container section-padding">
+      <h2 class="section-title">Proudly Recognized</h2>
+      <div class="partners-logos">
+        <!-- Placeholder logo images using FontAwesome icons as placeholder, but can be replaced with actual images -->
+        <div><i class="fas fa-trophy" style="font-size: 3rem; color: var(--savanna-gold);"></i><p>Eco-Tourism Kenya</p></div>
+        <div><i class="fas fa-globe" style="font-size: 3rem; color: var(--savanna-gold);"></i><p>World Travel Awards</p></div>
+        <div><i class="fas fa-hand-holding-heart" style="font-size: 3rem; color: var(--savanna-gold);"></i><p>Fair Trade Tourism</p></div>
+        <div><i class="fas fa-camera" style="font-size: 3rem; color: var(--savanna-gold);"></i><p>National Geographic Partner</p></div>
+      </div>
+    </section>
+
+    <!-- Latest from the Blog -->
+    <section class="container section-padding" style="padding-top: 0;">
+      <h2 class="section-title">Safari Journal</h2>
+      <p class="section-sub">Insights, tips, and stories from the bush</p>
+      <div class="blog-preview">
+        <div class="blog-card">
+          <img src="images/image1.jpg" alt="Lion">
+          <div class="blog-card-content">
+            <h3>How to photograph the Big Five</h3>
+            <p>Expert advice on lens choice, golden hour, and patience in the wild.</p>
+            <a href="blog.html" class="read-more">Read more →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="images/image2.jpg" alt="Safari vehicle">
+          <div class="blog-card-content">
+            <h3>What to pack for a 7‑day safari</h3>
+            <p>Essential gear, clothing, and unexpected items you’ll thank us for.</p>
+            <a href="blog.html" class="read-more">Read more →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="images/image3.jpg" alt="Elephants">
+          <div class="blog-card-content">
+            <h3>Conservation success: Elephant populations rise</h3>
+            <p>How community-led projects are saving Africa's giants.</p>
+            <a href="blog.html" class="read-more">Read more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <div class="container section-padding">
+      <div class="newsletter">
+        <i class="fas fa-envelope-open-text" style="font-size: 2.5rem; color: var(--sunset-orange);"></i>
+        <h3>Join the Legacy Circle</h3>
+        <p>Get exclusive safari offers, conservation news, and travel inspiration.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+        <p style="font-size: 0.8rem; margin-top: 1rem;">No spam, unsubscribe anytime.</p>
+        <div id="newsletterFeedback" class="success-message" style="margin-top: 10px;"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Featured tours (top 3 packages from tours data, or define static)
+    const featuredPackages = [
+      { name: "Great Migration Safari", price: "$2,450", desc: "7 days – witness wildebeest migration in Maasai Mara & Serengeti.", img: "images/image10.jpg", link: "tours.html" },
+      { name: "Big Five Explorer", price: "$1,890", desc: "5-day private safari in Amboseli & Lake Nakuru.", img: "images/image2.jpg", link: "tours.html" },
+      { name: "Gorilla & Golden Monkey", price: "$3,250", desc: "4 days – gorilla trekking in Bwindi, Uganda.", img: "images/image3.jpg", link: "tours.html" }
+    ];
+    const featuredContainer = document.getElementById('featured-tours-grid');
+    if (featuredContainer) {
+      featuredContainer.innerHTML = featuredPackages.map(pkg => `
+        <div class="tour-card-featured">
+          <div class="tour-img"><img src="${pkg.img}" alt="${pkg.name}"></div>
+          <div class="tour-info">
+            <h3>${pkg.name}</h3>
+            <div class="tour-price">from ${pkg.price}</div>
+            <p>${pkg.desc}</p>
+            <a href="${pkg.link}" class="btn-outline" style="display: inline-block; margin-top: 8px;">Discover →</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Newsletter form handling
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        const feedback = document.getElementById('newsletterFeedback');
+        if (!email || !email.includes('@')) {
+          feedback.innerHTML = '<span style="color:#E76F51;">Please enter a valid email address.</span>';
+          return;
+        }
+        feedback.innerHTML = '<span style="color:#2F6B3E;">✨ Thanks for subscribing! You\'ll hear from us soon.</span>';
+        emailInput.value = '';
+        setTimeout(() => feedback.innerHTML = '', 4000);
+      });
+    }
+  </script>
+</body>
+</html>
