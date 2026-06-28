@@ -1,0 +1,12 @@
+{
+  "name": "legacysafaris/website",
+  "description": "Legacy Safaris Ltd – Dynamic PHP Website",
+  "require": {
+    "phpmailer/phpmailer": "^7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "LegacySafaris\\": "src/"
+    }
+  }
+}
